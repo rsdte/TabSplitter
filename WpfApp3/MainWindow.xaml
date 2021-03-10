@@ -1,0 +1,44 @@
+﻿<Window
+    x:Class="WpfApp3.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfApp3.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.Resources />
+    <Grid>
+        <local:TabSplitter x:Name="panel" />
+        <!--<local:SwitchButtonGroup x:Name="panel" />-->
+
+
+        <!--<local:SwitchButtonGroup
+            x:Name="panel"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch"
+            BorderBrush="Blue"
+            BorderThickness="1"
+            Direction="Vertical" />-->
+
+        <!--<local:Splitter
+            x:Name="panel"
+            Width="25"
+            Direction="Vertical" />-->
+        <!--<local:Splitter
+            x:Name="panel"
+            Height="25"
+            Background="Red"
+            Direction="Horizontal" />-->
+
+        <!--<Button
+            Width="100"
+            Height="30"
+            Click="Button_Click"
+            Content="click" />-->
+    </Grid>
+</Window>

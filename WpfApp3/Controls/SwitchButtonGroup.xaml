@@ -1,0 +1,183 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WpfApp3.Controls">
+
+    <Style TargetType="{x:Type local:SwitchButtonGroup}">
+        <Style.Resources>
+            <Style x:Key="SwithButtonStyle" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                <Viewbox Stretch="Uniform">
+                                    <Grid RenderTransformOrigin="0.5,0.5">
+                                        <Path Data="M929.623323 598.014206h-236.799289a94.463717 94.463717 0 0 0-94.463717 94.463717v237.311288a93.951718 93.951718 0 0 0 27.647917 66.5598A92.671722 92.671722 0 0 0 691.288038 1023.996928h237.311288A94.719716 94.719716 0 0 0 1024.08704 929.533211v-237.055288a94.975715 94.975715 0 0 0-27.647917-66.8158 93.43972 93.43972 0 0 0-66.8158-27.647917zM921.687347 698.109906a3.32799 3.32799 0 0 1 2.559993 0v221.183336s0 1.791995-3.071991 3.32799h-219.391342a3.32799 3.32799 0 0 1-3.32799-3.32799V701.437896a3.839988 3.839988 0 0 1 0-2.303993 3.071991 3.071991 0 0 1 2.303993 0zM94.297829 425.982722h237.055289A94.463717 94.463717 0 0 0 425.816835 332.799002V94.463717A94.975715 94.975715 0 0 0 331.353118 0H94.553829A94.719716 94.719716 0 0 0 0.090112 94.463717V332.799002a93.951718 93.951718 0 0 0 94.207717 94.207717z m5.887983-102.399693V102.399693A2.559992 2.559992 0 0 1 102.489805 102.399693a2.815992 2.815992 0 0 1 2.303993 0h218.623344a2.559992 2.559992 0 0 1 2.303993 0v223.743329a4.095988 4.095988 0 0 1-2.303993 0H102.489805a3.071991 3.071991 0 0 1-2.303993-3.58399zM586.328353 34.815896a53.759839 53.759839 0 0 0 5.631983 106.49568h2.559993A459.006623 459.006623 0 0 1 921.687347 389.630831a46.335861 46.335861 0 0 0 18.943943 19.96794 47.871856 47.871856 0 0 0 27.903917 9.727971H972.887194a51.199846 51.199846 0 0 0 35.327894-14.591956 49.407852 49.407852 0 0 0 15.871952-35.583893V166.143502a51.199846 51.199846 0 0 0-51.199846-51.199847h-4.095988a51.199846 51.199846 0 0 0-51.199847 51.199847v37.119888a556.79833 556.79833 0 0 0-298.239105-164.095508M439.384794 893.43732a459.006623 459.006623 0 0 1-338.430985-243.199271 51.199846 51.199846 0 0 0-46.59186-32.511902H51.289958a51.199846 51.199846 0 0 0-48.127855 35.583893 33.023901 33.023901 0 0 0-3.071991 9.727971 20.479939 20.479939 0 0 0 0 3.839988v204.799386a51.199846 51.199846 0 0 0 51.199846 51.199846h4.095988a51.199846 51.199846 0 0 0 51.199847-51.199846v-37.631887a558.334325 558.334325 0 0 0 312.319063 162.815511 61.695815 61.695815 0 0 0 19.199942 3.32799h3.839988a51.199846 51.199846 0 0 0 37.119889-15.359953 51.199846 51.199846 0 0 0 13.055961-37.631888 54.015838 54.015838 0 0 0-15.615953-38.143885 51.199846 51.199846 0 0 0-22.271933-13.567959M10.330081 668.413995z" Fill="{TemplateBinding Foreground}" />
+                                        <Grid.RenderTransform>
+                                            <ScaleTransform ScaleX="0.5" ScaleY="0.5" />
+                                        </Grid.RenderTransform>
+                                    </Grid>
+                                </Viewbox>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Foreground" Value="Red" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="VerticalSwitchButtonGroupStyle" TargetType="local:SwitchButtonGroup">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type local:SwitchButtonGroup}">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                <Grid x:Name="PART_Panel">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <local:SwitchButton
+                                        x:Name="PART_UpButton"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="Transparent"
+                                        BorderThickness="0"
+                                        Content="AA"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        GroupName="SWITCHGROUP"
+                                        IsChecked="True"
+                                        SelectedBackground="#434346" />
+                                    <Button
+                                        x:Name="PART_SwitchButton"
+                                        Grid.Row="1"
+                                        Background="Transparent"
+                                        BorderBrush="Transparent"
+                                        BorderThickness="0"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        Style="{StaticResource ResourceKey=SwithButtonStyle}" />
+                                    <local:SwitchButton
+                                        x:Name="PART_DownButton"
+                                        Grid.Row="2"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="Transparent"
+                                        Content="BB"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        GroupName="SWITCHGROUP"
+                                        SelectedBackground="#434346" />
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="HorizontalSwitchButtonGroupStyle" TargetType="local:SwitchButtonGroup">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type local:SwitchButtonGroup}">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                <Grid x:Name="PART_Panel" RenderTransformOrigin="0.5,0.5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <local:SwitchButton
+                                        x:Name="PART_UpButton"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="Transparent"
+                                        BorderThickness="0"
+                                        Content="AA"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        GroupName="SWITCHGROUP"
+                                        IsChecked="True"
+                                        SelectedBackground="#434346" />
+                                    <Button
+                                        x:Name="PART_SwitchButton"
+                                        Grid.Column="1"
+                                        Background="Transparent"
+                                        BorderBrush="Transparent"
+                                        BorderThickness="0"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        Style="{StaticResource ResourceKey=SwithButtonStyle}" />
+
+                                    <local:SwitchButton
+                                        x:Name="PART_DownButton"
+                                        Grid.Column="2"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="Transparent"
+                                        Content="BB"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        GroupName="SWITCHGROUP"
+                                        SelectedBackground="#434346" />
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+        </Style.Resources>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:SwitchButtonGroup}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid x:Name="PART_Panel" RenderTransformOrigin="0.5,0.5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <local:SwitchButton
+                                x:Name="PART_UpButton"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="Transparent"
+                                BorderThickness="0"
+                                Content="AA"
+                                Foreground="{TemplateBinding Foreground}"
+                                GroupName="SWITCHGROUP"
+                                IsChecked="True"
+                                SelectedBackground="#434346" />
+                            <Button
+                                x:Name="PART_SwitchButton"
+                                Grid.Column="1"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                BorderThickness="0"
+                                Foreground="{TemplateBinding Foreground}"
+                                Style="{StaticResource ResourceKey=SwithButtonStyle}" />
+
+                            <local:SwitchButton
+                                x:Name="PART_DownButton"
+                                Grid.Column="2"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="Transparent"
+                                Content="BB"
+                                Foreground="{TemplateBinding Foreground}"
+                                GroupName="SWITCHGROUP"
+                                SelectedBackground="#434346" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

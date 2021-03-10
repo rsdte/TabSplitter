@@ -1,0 +1,528 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WpfApp3.Controls">
+    <Style TargetType="{x:Type local:Splitter}">
+        <Style.Resources>
+            <!--<Style x:Key="VerticalSplitterStyle" TargetType="local:Splitter">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type local:Splitter}">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                <Grid x:Name="PART_Panel">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+                                    <local:SwitchButtonGroup
+                                        x:Name="PART_SwitchButtonGroup"
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalContentAlignment="Stretch"
+                                        VerticalContentAlignment="Stretch"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="Blue"
+                                        BorderThickness="1"
+                                        Direction="Vertical"
+                                        Foreground="{TemplateBinding Foreground}" />
+                                    <Thumb
+                                        x:Name="PART_Thumb"
+                                        Grid.Row="1"
+                                        HorizontalAlignment="Stretch"
+                                        VerticalContentAlignment="Stretch"
+                                        Background="{TemplateBinding Background}"
+                                        Foreground="{TemplateBinding Foreground}">
+                                        <Thumb.Template>
+                                            <ControlTemplate TargetType="Thumb">
+                                                <Border
+                                                    Background="{TemplateBinding Background}"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}">
+                                                    <Grid Background="Transparent" />
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="HorizontalSplitterStyle" TargetType="local:Splitter">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type local:Splitter}">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                <Grid x:Name="PART_Panel">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="120" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="80" />
+                                    </Grid.ColumnDefinitions>
+                                    <local:SwitchButtonGroup
+                                        x:Name="PART_SwitchButtonGroup"
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalContentAlignment="Stretch"
+                                        VerticalContentAlignment="Stretch"
+                                        Background="{TemplateBinding Background}"
+                                        Direction="Horizontal"
+                                        Foreground="{TemplateBinding Foreground}" />
+                                    <Thumb
+                                        x:Name="PART_Thumb"
+                                        Grid.Column="1"
+                                        HorizontalAlignment="Stretch"
+                                        VerticalContentAlignment="Stretch"
+                                        Background="{TemplateBinding Background}"
+                                        Foreground="{TemplateBinding Foreground}">
+                                        <Thumb.Template>
+                                            <ControlTemplate TargetType="Thumb">
+                                                <Border
+                                                    Background="{TemplateBinding Background}"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}">
+                                                    <Grid Background="Transparent" />
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>-->
+
+            <Style x:Key="VerticalSplitterStyle" TargetType="local:Splitter">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type local:Splitter}">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                <Grid x:Name="PART_Panel">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+                                    <local:SwitchButtonGroup
+                                        x:Name="PART_SwitchButtonGroup"
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalContentAlignment="Stretch"
+                                        VerticalContentAlignment="Stretch"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="Blue"
+                                        BorderThickness="1"
+                                        Direction="Vertical"
+                                        Foreground="{TemplateBinding Foreground}" />
+                                    <Thumb
+                                        x:Name="PART_Thumb"
+                                        Grid.Row="1"
+                                        HorizontalAlignment="Stretch"
+                                        VerticalContentAlignment="Stretch"
+                                        Background="{TemplateBinding Background}"
+                                        Cursor="SizeWE"
+                                        Foreground="{TemplateBinding Foreground}">
+                                        <Thumb.Template>
+                                            <ControlTemplate TargetType="Thumb">
+                                                <Border
+                                                    Background="{TemplateBinding Background}"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}">
+                                                    <Grid Background="Transparent" />
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                    <StackPanel
+                                        Name="PART_Right"
+                                        Grid.Row="2"
+                                        Background="{TemplateBinding Background}"
+                                        Orientation="Vertical">
+                                        <RadioButton
+                                            Name="PART_VerticalMode"
+                                            Width="15"
+                                            Height="15"
+                                            Background="{TemplateBinding Background}"
+                                            Foreground="{TemplateBinding Foreground}"
+                                            GroupName="ModeGroup">
+                                            <RadioButton.Template>
+                                                <ControlTemplate TargetType="RadioButton">
+                                                    <Border
+                                                        Name="PART_Border"
+                                                        Background="{TemplateBinding Background}"
+                                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                                        BorderThickness="{TemplateBinding BorderThickness}">
+                                                        <Grid Margin="1" Background="Transparent">
+                                                            <Rectangle
+                                                                Width="1"
+                                                                Height="{TemplateBinding Height}"
+                                                                Fill="{TemplateBinding Foreground}" />
+                                                        </Grid>
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="RadioButton.IsChecked" Value="True">
+                                                            <Setter Property="Background" Value="Red" />
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </RadioButton.Template>
+                                        </RadioButton>
+                                        <RadioButton
+                                            Name="PART_HorizontalMode"
+                                            Width="15"
+                                            Height="15"
+                                            Margin="2,0"
+                                            Background="{TemplateBinding Background}"
+                                            Foreground="{TemplateBinding Foreground}"
+                                            GroupName="ModeGroup"
+                                            IsChecked="True">
+                                            <RadioButton.Template>
+                                                <ControlTemplate TargetType="RadioButton">
+                                                    <Border
+                                                        Background="{TemplateBinding Background}"
+                                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                                        BorderThickness="{TemplateBinding BorderThickness}">
+                                                        <Grid Margin="1" Background="Transparent">
+                                                            <Rectangle
+                                                                Width="{TemplateBinding Width}"
+                                                                Height="1"
+                                                                Fill="{TemplateBinding Foreground}" />
+                                                        </Grid>
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsChecked" Value="True">
+                                                            <Setter Property="Background" Value="Red" />
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </RadioButton.Template>
+                                        </RadioButton>
+                                        <CheckBox
+                                            Name="PART_ToDown"
+                                            Width="15"
+                                            Height="15"
+                                            Margin="0,0,2,0"
+                                            Background="{TemplateBinding Background}"
+                                            Foreground="{TemplateBinding Foreground}"
+                                            IsThreeState="False"
+                                            RenderTransformOrigin="0.5,0.5">
+                                            <CheckBox.Template>
+                                                <ControlTemplate TargetType="CheckBox">
+                                                    <Border
+                                                        Background="{TemplateBinding Background}"
+                                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                                        BorderThickness="{TemplateBinding BorderThickness}">
+                                                        <Viewbox
+                                                            Width="15"
+                                                            Height="15"
+                                                            Stretch="Uniform">
+                                                            <Grid>
+                                                                <Path Data="M0 161.92L127.786667 34.773333 602.752 512 127.786667 989.269333 0 862.08 348.458667 512 0 161.92zM769.706667 512l-348.458667 350.08 127.786667 127.146667L1024 512 549.034667 34.730667l-127.786667 127.146666L769.706667 512z" Fill="{TemplateBinding Foreground}" />
+                                                            </Grid>
+                                                        </Viewbox>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </CheckBox.Template>
+                                        </CheckBox>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="HorizontalSplitterStyle" TargetType="local:Splitter">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type local:Splitter}">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                                <Grid x:Name="PART_Panel">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <local:SwitchButtonGroup
+                                        x:Name="PART_SwitchButtonGroup"
+                                        HorizontalAlignment="Stretch"
+                                        VerticalAlignment="Stretch"
+                                        HorizontalContentAlignment="Stretch"
+                                        VerticalContentAlignment="Stretch"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="Blue"
+                                        BorderThickness="1"
+                                        Direction="Horizontal"
+                                        Foreground="{TemplateBinding Foreground}" />
+                                    <Thumb
+                                        x:Name="PART_Thumb"
+                                        Grid.Column="1"
+                                        HorizontalAlignment="Stretch"
+                                        VerticalContentAlignment="Stretch"
+                                        Background="Red"
+                                        Cursor="SizeNS"
+                                        Foreground="{TemplateBinding Foreground}">
+                                        <Thumb.Template>
+                                            <ControlTemplate TargetType="Thumb">
+                                                <Border
+                                                    Background="{TemplateBinding Background}"
+                                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                                    BorderThickness="{TemplateBinding BorderThickness}">
+                                                    <Grid Background="Transparent" />
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                    <StackPanel
+                                        Name="PART_Right"
+                                        Grid.Column="2"
+                                        Background="{TemplateBinding Background}"
+                                        Orientation="Horizontal">
+                                        <RadioButton
+                                            Name="PART_VerticalMode"
+                                            Width="15"
+                                            Height="15"
+                                            Background="{TemplateBinding Background}"
+                                            Foreground="{TemplateBinding Foreground}"
+                                            GroupName="ModeGroup">
+                                            <RadioButton.Template>
+                                                <ControlTemplate TargetType="RadioButton">
+                                                    <Border
+                                                        Name="PART_Border"
+                                                        Background="{TemplateBinding Background}"
+                                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                                        BorderThickness="{TemplateBinding BorderThickness}">
+                                                        <Grid Margin="1" Background="Transparent">
+                                                            <Rectangle
+                                                                Width="1"
+                                                                Height="{TemplateBinding Height}"
+                                                                Fill="{TemplateBinding Foreground}" />
+                                                        </Grid>
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="RadioButton.IsChecked" Value="True">
+                                                            <Setter Property="Background" Value="Red" />
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </RadioButton.Template>
+                                        </RadioButton>
+                                        <RadioButton
+                                            Name="PART_HorizontalMode"
+                                            Width="15"
+                                            Height="15"
+                                            Margin="2,0"
+                                            Background="{TemplateBinding Background}"
+                                            Foreground="{TemplateBinding Foreground}"
+                                            GroupName="ModeGroup"
+                                            IsChecked="True">
+                                            <RadioButton.Template>
+                                                <ControlTemplate TargetType="RadioButton">
+                                                    <Border
+                                                        Background="{TemplateBinding Background}"
+                                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                                        BorderThickness="{TemplateBinding BorderThickness}">
+                                                        <Grid Margin="1" Background="Transparent">
+                                                            <Rectangle
+                                                                Width="{TemplateBinding Width}"
+                                                                Height="1"
+                                                                Fill="{TemplateBinding Foreground}" />
+                                                        </Grid>
+                                                    </Border>
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsChecked" Value="True">
+                                                            <Setter Property="Background" Value="Red" />
+                                                        </Trigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </RadioButton.Template>
+                                        </RadioButton>
+                                        <CheckBox
+                                            Name="PART_ToDown"
+                                            Width="15"
+                                            Height="15"
+                                            Margin="0,0,2,0"
+                                            Background="{TemplateBinding Background}"
+                                            Foreground="{TemplateBinding Foreground}"
+                                            IsThreeState="False"
+                                            RenderTransformOrigin="0.5,0.5">
+                                            <CheckBox.Template>
+                                                <ControlTemplate TargetType="CheckBox">
+                                                    <Border
+                                                        Background="{TemplateBinding Background}"
+                                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                                        BorderThickness="{TemplateBinding BorderThickness}">
+                                                        <Viewbox
+                                                            Width="15"
+                                                            Height="15"
+                                                            Stretch="Uniform">
+                                                            <Grid>
+                                                                <Path Data="M0 161.92L127.786667 34.773333 602.752 512 127.786667 989.269333 0 862.08 348.458667 512 0 161.92zM769.706667 512l-348.458667 350.08 127.786667 127.146667L1024 512 549.034667 34.730667l-127.786667 127.146666L769.706667 512z" Fill="{TemplateBinding Foreground}" />
+                                                            </Grid>
+                                                        </Viewbox>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </CheckBox.Template>
+                                        </CheckBox>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+        </Style.Resources>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:Splitter}">
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid x:Name="PART_Panel">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="120" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="80" />
+                            </Grid.ColumnDefinitions>
+                            <local:SwitchButtonGroup
+                                x:Name="PART_SwitchButtonGroup"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                HorizontalContentAlignment="Stretch"
+                                VerticalContentAlignment="Stretch"
+                                Background="{TemplateBinding Background}"
+                                Direction="Horizontal"
+                                Foreground="{TemplateBinding Foreground}" />
+                            <Thumb
+                                x:Name="PART_Thumb"
+                                Grid.Column="1"
+                                HorizontalAlignment="Stretch"
+                                VerticalContentAlignment="Stretch"
+                                Background="{TemplateBinding Background}"
+                                Foreground="{TemplateBinding Foreground}">
+                                <Thumb.Template>
+                                    <ControlTemplate TargetType="Thumb">
+                                        <Border
+                                            Background="{TemplateBinding Background}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}">
+                                            <Grid Background="Transparent" />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Thumb.Template>
+                            </Thumb>
+                            <StackPanel
+                                Name="PART_Right"
+                                Grid.Column="2"
+                                Background="{TemplateBinding Background}"
+                                Orientation="Horizontal">
+                                <RadioButton
+                                    Name="PART_VerticalMode"
+                                    Width="15"
+                                    Height="15"
+                                    Background="{TemplateBinding Background}"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    GroupName="ModeGroup">
+                                    <RadioButton.Template>
+                                        <ControlTemplate TargetType="RadioButton">
+                                            <Border
+                                                Name="PART_Border"
+                                                Background="{TemplateBinding Background}"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}">
+                                                <Grid Margin="1" Background="Transparent">
+                                                    <Rectangle
+                                                        Width="1"
+                                                        Height="{TemplateBinding Height}"
+                                                        Fill="{TemplateBinding Foreground}" />
+                                                </Grid>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="RadioButton.IsChecked" Value="True">
+                                                    <Setter Property="Background" Value="Red" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </RadioButton.Template>
+                                </RadioButton>
+                                <RadioButton
+                                    Name="PART_HorizontalMode"
+                                    Width="15"
+                                    Height="15"
+                                    Margin="2,0"
+                                    Background="{TemplateBinding Background}"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    GroupName="ModeGroup"
+                                    IsChecked="True">
+                                    <RadioButton.Template>
+                                        <ControlTemplate TargetType="RadioButton">
+                                            <Border
+                                                Background="{TemplateBinding Background}"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}">
+                                                <Grid Margin="1" Background="Transparent">
+                                                    <Rectangle
+                                                        Width="{TemplateBinding Width}"
+                                                        Height="1"
+                                                        Fill="{TemplateBinding Foreground}" />
+                                                </Grid>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Background" Value="Red" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </RadioButton.Template>
+                                </RadioButton>
+                                <CheckBox
+                                    Name="PART_ToDown"
+                                    Width="15"
+                                    Height="15"
+                                    Margin="0,0,2,0"
+                                    Background="{TemplateBinding Background}"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    IsThreeState="False"
+                                    RenderTransformOrigin="0.5,0.5">
+                                    <CheckBox.Template>
+                                        <ControlTemplate TargetType="CheckBox">
+                                            <Border
+                                                Background="{TemplateBinding Background}"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}">
+                                                <Viewbox
+                                                    Width="15"
+                                                    Height="15"
+                                                    Stretch="Uniform">
+                                                    <Grid>
+                                                        <Path Data="M0 161.92L127.786667 34.773333 602.752 512 127.786667 989.269333 0 862.08 348.458667 512 0 161.92zM769.706667 512l-348.458667 350.08 127.786667 127.146667L1024 512 549.034667 34.730667l-127.786667 127.146666L769.706667 512z" Fill="{TemplateBinding Foreground}" />
+                                                    </Grid>
+                                                </Viewbox>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </CheckBox.Template>
+                                </CheckBox>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
