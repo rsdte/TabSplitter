@@ -1,11 +1,11 @@
-﻿
+
 # 实现 TabSplitter 
 
 ## 预览
 
-![水平预览图](./images/image1.png)
+![水平预览图](./Images/image1.png)
 
-![垂直预览图](./images/image2.png)
+![垂直预览图](./Images/image2.png)
 
 ## 功能
 - 上下左右内容切换
